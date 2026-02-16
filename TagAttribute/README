@@ -1,4 +1,4 @@
-"UnityTagAttribute.cs" and "UnityTagDrawer.cs" are used to have a  tag dropdown (instead of a plain string field) using "[UnityTag]"
+"UnityTagAttribute.cs" and "UnityTagDrawer.cs" are used to have a tag dropdown (instead of a plain string field) using "[UnityTag]"
 
 - Exemple:
 
