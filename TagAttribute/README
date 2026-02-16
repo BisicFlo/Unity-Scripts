@@ -1,0 +1,14 @@
+"UnityTagAttribute.cs" and "UnityTagDrawer.cs" are used to have a  tag dropdown (instead of a plain string field) using "[UnityTag]"
+
+- Exemple:
+
+    [UnityTag] [SerializeField] private string openByTag;
+
+
+- Correct example structure:
+
+Assets/
+├── Scripts/
+│   └── UnityTagAttribute.cs     <- here (no Editor folder)
+└── Editor/
+    └── UnityTagDrawer.cs        <- drawer here
