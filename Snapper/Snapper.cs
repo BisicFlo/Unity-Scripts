@@ -2,7 +2,6 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Snapper : MonoBehaviour {
     /// <summary>
     /// Snaps compatible objects to this transform (shaft) based on shape rules.
     /// Uses trigger detection + name prefix matching.
@@ -10,7 +9,8 @@ public class Snapper : MonoBehaviour {
     /// The Object to snap must have a Rigidbody and a BoxCollider, and be oriented in X axis (Red Arrow)
     /// The Shaft must have a BoxCollider in Trigger mode (isTrigger = true), and be oriented in X axis (Red Arrow)
     /// </summary>
-
+public class Snapper : MonoBehaviour {
+    
     // --------------------------------------------------------------
     //   Inspector Fields
     // -------------------------------------------------------------- 
@@ -25,10 +25,10 @@ public class Snapper : MonoBehaviour {
     [Tooltip("Axis in World Space along which the object will be constrained")]
     public AxisType Axis;
 
-    [Tooltip("Number of sides — See documentation for more details")]
+    [Tooltip("Number of sides â€” See documentation for more details")]
     [SerializeField] private int N; // 
 
-    [Tooltip("Allow 180° flip")]
+    [Tooltip("Allow 180Â° flip")]
     [SerializeField] private bool CanBeFlipped;
 
     [Tooltip("Parent the snapped object to this transform when snapping")]
@@ -194,6 +194,7 @@ public class Snapper : MonoBehaviour {
         Z2 = other.transform.forward;
     }
 }
+
 
 
 
