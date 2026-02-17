@@ -1,0 +1,7 @@
+
+
+
+Axis [Rigidbody]
+├── EnterZone [Box Collider](IsTrigger) [SnappingArea.cs]   
+└── ExitZone [Box Collider](IsTrigger) [UnsnappingArea.cs]
+   
