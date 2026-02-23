@@ -49,7 +49,6 @@ public class ShopManager : MonoBehaviour {
     }
     private void GainXp(int xpGained) {
         if (playerLevel == 10) return; //Niveau Max
-
         xp += xpGained;
         if (xp >= xpRequired[playerLevel - 1]) {
             xp = 0;
@@ -71,17 +70,14 @@ public class ShopManager : MonoBehaviour {
     }
 
     private int PickRarity(int level) {
-
         int rarity = 1;
         int randomNumber = Random.Range(1, 101); // (int minInclusive, int maxExclusive);
         int length = weights.GetLength(1); // => 5
-
         for (int i = 0; i < length; i++) {
             randomNumber -= weights[level - 1, i];
             if (randomNumber <= 0) return rarity;
             rarity++;
         }
-
         return -1;
     }
 
@@ -106,16 +102,13 @@ public class ShopManager : MonoBehaviour {
     }
 
 
-    private IEnumerator SetupAllButtons() {
-        
+    private IEnumerator SetupAllButtons() {        
         foreach (var button in buttonList) {
             yield return new WaitForSeconds(1);
-
             SetupOneButton(button);
         }
         yield return new WaitForSeconds(1);
         RefreshButton.gameObject.SetActive(true);
-
     }
 
     private void ClearAllButtons() {
@@ -126,13 +119,10 @@ public class ShopManager : MonoBehaviour {
 
     public void RefreshShop() {
         if (BuySomething(RefreshCost)) {
-            RefreshButton.gameObject.SetActive(false);
-                     
+            RefreshButton.gameObject.SetActive(false);                     
             ClearAllButtons();
             StartCoroutine(SetupAllButtons());
-
         }
     }
-
-
 }
+
