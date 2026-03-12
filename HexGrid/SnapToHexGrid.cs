@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 [ExecuteInEditMode]
@@ -29,11 +28,10 @@ public class SnapToHexGrid : MonoBehaviour {
             Transform child = transform.GetChild(i);
             Snap(child);
         }
-
     }
 
 
-    void Snap(Transform hexTile) {
+    private void Snap(Transform hexTile) {
 
         // _________Position_________
         Vector3 hexPosition = hexTile.position;
@@ -72,7 +70,7 @@ public class SnapToHexGrid : MonoBehaviour {
         hexTile.position = newPosition;
 
         // _________Rotation_________
-        //Snaps the world Y rotation to the nearest 60° increment:
+        //Snaps the world Y rotation to the nearest 60Â° increment:
 
         Vector3 currentEuler = hexTile.eulerAngles;
 
@@ -88,7 +86,7 @@ public class SnapToHexGrid : MonoBehaviour {
         hexTile.eulerAngles = new Vector3(0, snappedY, 0);
 
     }
-
 }
+
 
 
