@@ -10,7 +10,7 @@ using UnityEngine;
 public class ChangeRenderingLayerMaskRecursively : EditorWindow {
 
     // UI variables
-    private string folderPath = "Assets/Florian/Prefabs/Turrets/Test";
+    private string folderPath = "Assets";
     private uint renderingLayerMask = 1; // Default = Light Layer 0 (bit 0)
 
     // Creates the menu item under Tools in Unity Editor
